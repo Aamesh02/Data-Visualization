@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+
+    
+
+</head>
+<body>
+    <style>
+        body {
+          background-image: url('bg11.jpg');
+        }
+        </style>
+
+    <h1 class="website-name">Data Visualization</h1>
+
+    <div class="container">
+        <div class="upload-container">
+            <label for="fileInput" class="custom-file-upload">
+                <i class="fas fa-cloud-upload-alt"></i> Choose a CSV file
+            </label>
+            <input type="file" id="fileInput" accept=".csv">
+        </div>
+        <div class="controls-container">
+            <div class="visualization-options">
+                <h2 style="font-size: 25px;">Select Visualization Type:</h2>
+                <select id="visualizationType">
+                    <option value="scatter">Scatter Plot</option>
+                    <option value="line">Line Plot</option>
+                    <option value="hexbin">Hexbin Plot</option>
+                    
+                </select>
+                <button id="visualizeBtn">Visualize Data</button>
+                <div id="loadingIndicator" style="display: none;">Loading...</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="visualization-container">
+        <div id="chartContainer" class="chart-container">
+            <!-- Plot will be displayed here -->
+        </div>
+        <div class="filler-image"></div>
+    </div>
+    
+    <div id="errorMessage" style="display: none;"></div>
+    <script src="script.js"></script>
+
+
+</body>
+</html>
